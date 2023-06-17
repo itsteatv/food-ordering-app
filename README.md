@@ -49,7 +49,7 @@ To run the project locally, follow these steps:
 2️⃣ Navigate to the project directory:
 
 ```bash
-  cd food-ordering-app📝
+  cd food-ordering-app
 ```
 
 3️⃣ Install dependencies
