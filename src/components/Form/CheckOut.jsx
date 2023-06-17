@@ -108,7 +108,7 @@ const Checkout = (props) => {
           onBlur={postalCodeInputBlurHandler}
         />
         {postalCodeError && (
-          <p className={styles.invalid}>Please enter a valid postal code.</p>
+          <p className={styles.invalid}>Please enter a valid postal code. (It Must Be 5 Numbers)</p>
         )}
       </div>
       <div className={`${styles.control} ${cityError ? styles.invalid : ""}`}>
