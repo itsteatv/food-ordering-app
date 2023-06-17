@@ -1,0 +1,55 @@
+.icon {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:focus {
+  outline: none;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.badge {
+  background-color: #424b5a;
+  padding: 0.01rem 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 25px;
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  font-weight: bold;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

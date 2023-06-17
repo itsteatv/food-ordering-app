@@ -1,0 +1,22 @@
+.form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.form button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #424b5a;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  border: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #3b4049;
+  transition: 0.3s ease-in-out;
+}

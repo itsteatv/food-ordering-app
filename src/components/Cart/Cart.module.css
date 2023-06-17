@@ -1,0 +1,223 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.actions {
+  text-align: left;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #424b5a;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #424b5a;
+  border-color: #424b5a;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #000;
+}
+
+.actions .button {
+  background-color: #424b5a;
+  color: white;
+}
+
+/*
+=============== 
+Modal
+===============
+*/
+:root {
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --transition: all 0.3s linear;
+  --radius: 0.25rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -1;
+}
+
+/* OPEN/CLOSE MODAL */
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  max-height: 50%;
+  overflow: scroll;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.error-message {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding: 1rem 0;
+}
+
+.cart-item h2 {
+  margin: 0 0 0.5rem 0;
+  color: #363636;
+}
+
+.summary {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #505d68;
+}
+
+.amount {
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: #363636;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .secondary-action {
+    flex-direction: column-reverse;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .main-button {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1.75rem;
+  }
+
+  .primary-total-amount {
+    font-size: 1rem;
+  }
+
+  .secondary-total-amount {
+    font-size: 1rem;
+  }
+
+  .actions .button--alt {
+    display: flex;
+    row-gap: 2rem;
+  }
+}
+
+.cart-item button {
+  display: flex;
+  justify-content: center;
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #424b5a;
+  border: 1px solid #424b5a;
+  width: 3rem;
+  text-align: center;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin: 0.25rem;
+}
+
+.cart-item button:hover,
+.cart-item button:active {
+  background-color: #3b4049;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
